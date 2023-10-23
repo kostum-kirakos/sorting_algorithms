@@ -4,8 +4,9 @@
  * selection_sort - sort the array
  *
  * @array: The array to be printed
- * @len: len of elements in @array
+ * @size: len of elements in @array
  */
+
 void selection_sort(int *array, size_t size)
 {
 	size_t i, j, index;
