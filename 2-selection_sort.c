@@ -6,15 +6,16 @@
  * @array: The array to be printed
  * @len: len of elements in @array
  */
-void selection_sort(int *array, int len)
+void selection_sort(int *array, size_t size)
 {
-	int index, tmp, i, j;
+	size_t i, j;
+	int index, tmp;
 
-	for (i = 0; i < len; i++)
+	for (i = 0; i < size; i++)
 	{
 		index = i;
 
-		for (j = i + 1; j < len; j++)
+		for (j = i + 1; j < size; j++)
 		{
 			if (array[index] > array[j])
 				index = i;
@@ -24,7 +25,7 @@ void selection_sort(int *array, int len)
 			tmp = array[i];
 			array[i] = array[index];
 			array[index] = tmp;
-			print_array(array, len);
+			print_array(array, size);
 		}
 	}
 }
